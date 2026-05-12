@@ -162,3 +162,6 @@
 
     .section-title { font-size: 1.6rem; }
 }
+    .nav-actions {
+        display: none !important;
+    }
