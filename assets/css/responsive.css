@@ -20,71 +20,10 @@
     .navbar { top: 0; }
 
     /* Navbar */
-    .nav-container {
-        position: relative;
-        gap: 10px;
-        padding-right: 52px;
-    }
-
-    .nav-logo {
-        min-width: 0;
-        flex: 1 1 auto;
-        max-width: 100%;
-    }
-
-    .logo-text {
-        min-width: 0;
-    }
-
-    .logo-text .logo-name,
-    .logo-text .logo-tagline {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .logo-text .logo-name {
-        font-size: 0.98rem;
-    }
-
-    .logo-text .logo-tagline { display: none; }
-
-    .nav-actions {
-        position: static;
-        margin-left: 0;
-        z-index: 20;
-    }
-
-    .hamburger {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 30;
-        pointer-events: auto;
-        touch-action: manipulation;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: var(--nav-height);
-        left: 0;
-        right: 0;
-        background: var(--dark);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 16px 0 24px;
-        transform: translateY(-110%);
-        opacity: 0;
-        transition: transform 0.35s ease, opacity 0.35s ease;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        z-index: 999;
-    }
-
+    /* Remove mobile navigation menu entirely */
+    .nav-menu,
     .nav-menu.open {
-        transform: translateY(0);
-        opacity: 1;
+        display: none !important;
     }
 
     .nav-link {
@@ -96,7 +35,7 @@
 
     .nav-link::after { display: none; }
 
-    .hamburger { display: flex; }
+    .hamburger { display: none !important; }
 
     .nav-btn { display: none; }
 
