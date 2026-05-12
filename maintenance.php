@@ -58,7 +58,7 @@ $message = file_exists(__DIR__ . '/maintenance.flag')
     <h1>Under Maintenance</h1>
     <p><?= nl2br(htmlspecialchars($message)) ?></p>
     <div class="brand">
-      <strong>ASB Tours</strong> - We'll be back soon
+      <strong>Travel Pro Lanka</strong> - We'll be back soon
     </div>
   </div>
 </body>
