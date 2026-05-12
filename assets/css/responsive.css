@@ -20,10 +20,15 @@
     .navbar { top: 0; }
 
     /* Navbar */
-    /* Remove mobile navigation menu entirely */
-    .nav-menu,
+    /* Keep hidden menu from blocking taps */
+    .nav-menu {
+        pointer-events: none !important;
+        visibility: hidden !important;
+    }
+
     .nav-menu.open {
-        display: none !important;
+        pointer-events: auto !important;
+        visibility: visible !important;
     }
 
     .nav-link {
