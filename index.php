@@ -14,7 +14,7 @@ $s = $pdo->query("SELECT `key`, `value` FROM settings")->fetchAll(PDO::FETCH_KEY
 $cfg = fn(string $key, string $default = '') => $s[$key] ?? $default;
 $turnstileSiteKey = nt_turnstile_site_key($s);
 $turnstileEnabled = nt_turnstile_enabled($s);
-$assetVersion = urlencode((string)($cfg('cache_busted_at', '') ?: '1'));
+$assetVersion = urlencode((string)($cfg('cache_busted_at', '') ?: '2'));
 
 // Hero banners
 $banners = $pdo->query("SELECT * FROM hero_banners WHERE is_active = 1 ORDER BY sort_order, id")->fetchAll();
@@ -1107,5 +1107,4 @@ $seoSchemas = [
 
 </body>
 </html>
-
 

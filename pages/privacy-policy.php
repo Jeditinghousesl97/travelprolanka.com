@@ -33,9 +33,10 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
     <link rel="stylesheet" href="../assets/css/variables.css">
     <?php include __DIR__ . '/../assets/php/site-theme.php'; ?>
     <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css?v=2">
     <link rel="stylesheet" href="../assets/css/services-page.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css?v=2">
     <style>
         .policy-body {
             max-width: 820px;
@@ -137,5 +138,4 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
-
 

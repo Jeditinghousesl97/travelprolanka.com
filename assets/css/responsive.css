@@ -20,15 +20,57 @@
     .navbar { top: 0; }
 
     /* Navbar */
-    /* Keep hidden menu from blocking taps */
+    .nav-container {
+        gap: 12px;
+    }
+
+    .nav-logo {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .logo-text {
+        min-width: 0;
+    }
+
+    .logo-text .logo-name {
+        max-width: 58vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.98rem;
+    }
+
+    .logo-text .logo-tagline {
+        display: none;
+    }
+
+    .nav-actions {
+        display: flex;
+        margin-left: auto;
+        position: relative;
+        z-index: 1201;
+    }
+
     .nav-menu {
-        pointer-events: none !important;
-        visibility: hidden !important;
+        display: none !important;
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 16px 0 24px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        z-index: 1200;
+        pointer-events: none;
     }
 
     .nav-menu.open {
-        pointer-events: auto !important;
-        visibility: visible !important;
+        display: flex !important;
+        pointer-events: auto;
     }
 
     .nav-link {
@@ -40,7 +82,13 @@
 
     .nav-link::after { display: none; }
 
-    .hamburger { display: none !important; }
+    .hamburger {
+        display: flex !important;
+        position: relative;
+        z-index: 1202;
+        pointer-events: auto;
+        touch-action: manipulation;
+    }
 
     .nav-btn { display: none; }
 
@@ -167,6 +215,3 @@
 
     .section-title { font-size: 1.6rem; }
 }
-    .nav-actions {
-        display: none !important;
-    }

@@ -132,12 +132,12 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
     <link rel="stylesheet" href="../assets/css/variables.css">
     <?php include __DIR__ . '/../assets/php/site-theme.php'; ?>
     <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css?v=2">
     <link rel="stylesheet" href="../assets/css/packages.css">
     <link rel="stylesheet" href="../assets/css/services-page.css">
     <link rel="stylesheet" href="../assets/css/packages-page.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css?v=2">
     <?php if ($turnstileEnabled): ?>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <?php endif; ?>
