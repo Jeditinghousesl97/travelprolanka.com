@@ -14,6 +14,8 @@ function initNavbar() {
     const topbar    = document.getElementById('topbar');
 
     if (!navbar || !hamburger || !navMenu) return;
+    if (navbar.dataset.navInit === '1') return;
+    navbar.dataset.navInit = '1';
 
     // Scroll: hide topbar, make navbar solid 
     function onScroll() {
@@ -32,10 +34,21 @@ function initNavbar() {
     onScroll(); // run once on init
 
     //  Hamburger Toggle 
-    hamburger.addEventListener('click', () => {
+    const toggleMenu = () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('open');
         document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    };
+
+    hamburger.addEventListener('pointerdown', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    hamburger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
     });
 
     // Close menu when a link is clicked 

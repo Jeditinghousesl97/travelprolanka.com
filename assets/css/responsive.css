@@ -21,13 +21,15 @@
 
     /* Navbar */
     .nav-container {
-        gap: 12px;
+        position: relative;
+        gap: 10px;
+        padding-right: 52px;
     }
 
     .nav-logo {
         min-width: 0;
         flex: 1 1 auto;
-        max-width: calc(100% - 56px);
+        max-width: 100%;
     }
 
     .logo-text {
@@ -45,20 +47,22 @@
         font-size: 0.98rem;
     }
 
-    .logo-text .logo-tagline {
-        font-size: 0.58rem;
-        letter-spacing: 1px;
-    }
+    .logo-text .logo-tagline { display: none; }
 
     .nav-actions {
-        margin-left: auto;
-        position: relative;
-        z-index: 5;
+        position: static;
+        margin-left: 0;
+        z-index: 20;
     }
 
     .hamburger {
-        position: relative;
-        z-index: 6;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
+        pointer-events: auto;
+        touch-action: manipulation;
     }
 
     .nav-menu {

@@ -178,10 +178,9 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
     <div id="footer-placeholder"></div>
 
     <script src="../assets/js/components.js?v=8"></script>
-    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/navbar.js?v=2"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
-
 
 
