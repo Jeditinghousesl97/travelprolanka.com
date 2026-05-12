@@ -55,15 +55,15 @@ $staticImages = [
     ['image_path'=>'../assets/images/hero/slide-3.jpg',              'title'=>'Sri Lanka Coastal Paradise',               'category'=>'beach',       'layout'=>''],
     ['image_path'=>'../assets/images/gallery/gallery-1.jpg',         'title'=>'Sri Lanka Cultural Heritage',              'category'=>'cultural',    'layout'=>''],
     ['image_path'=>'../assets/images/hero/slide-1.jpg',              'title'=>'Sri Lanka Natural Wonders',                'category'=>'wildlife',    'layout'=>'wide'],
-    ['image_path'=>'../assets/images/destinations/sigiriya.jpg',     'title'=>'Your ASB Tours Team',                 'category'=>'honeymoon',   'layout'=>''],
+    ['image_path'=>'../assets/images/destinations/sigiriya.jpg',     'title'=>'Your Travel Pro Lanka Team',         'category'=>'honeymoon',   'layout'=>''],
 ];
 
 $displayImages = $useStatic ? $staticImages : $images;
 
 // Assign layout classes for DB items in a repeating pattern
 $layoutPattern = ['tall','wide','','','wide','','','tall','wide','',''];
-$seoTitle = 'Photo Gallery | ASB Tours Sri Lanka';
-$seoDesc = 'ASB Tours Sri Lanka Photo Gallery, Beaches, Cultural Sites, Wildlife Safaris, Hill Country & more. Browse stunning moments from our tours.';
+$seoTitle = 'Photo Gallery | Travel Pro Lanka (Pvt) Ltd Sri Lanka';
+$seoDesc = 'Travel Pro Lanka (Pvt) Ltd Sri Lanka Photo Gallery, Beaches, Cultural Sites, Wildlife Safaris, Hill Country & more. Browse stunning moments from our tours.';
 $seoCanonical = absolute_site_url('pages/gallery.php');
 $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/logo.png');
 ?>
@@ -80,11 +80,11 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
         'canonical' => $seoCanonical,
         'image' => $seoImage,
         'type' => 'website',
-        'site_name' => $cfg('site_name', 'ASB Tours'),
+        'site_name' => $cfg('site_name', 'Travel Pro Lanka (Pvt) Ltd'),
         'structured_data' => [[
             '@context' => 'https://schema.org',
             '@type' => 'ImageGallery',
-            'name' => 'ASB Tours Sri Lanka Photo Gallery',
+            'name' => 'Travel Pro Lanka (Pvt) Ltd Sri Lanka Photo Gallery',
             'url' => $seoCanonical,
             'description' => $seoDesc,
         ]],
@@ -273,7 +273,7 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
             <div data-aos="fade-up">
                 <span class="section-tag light">Ready to Explore?</span>
                 <h2 style="margin-top:12px;">Create Your Own <span>Memories</span></h2>
-                <p>Every photo in this gallery was taken by a real traveler on a ASB Tours journey. Your story starts here.</p>
+                <p>Every photo in this gallery was taken by a real traveler on a Travel Pro Lanka (Pvt) Ltd journey. Your story starts here.</p>
                 <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
                     <a href="packages.php" class="btn btn-primary">
                         <i class="fa-solid fa-compass"></i> Browse Packages
@@ -386,7 +386,6 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
     </script>
 </body>
 </html>
-
 
 
 

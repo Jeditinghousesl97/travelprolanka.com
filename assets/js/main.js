@@ -29,6 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         yearEl.textContent = new Date().getFullYear();
     }
 
-    console.log('%cASB Tours — Site loaded successfully ✓',
+    console.log('%cTravel Pro Lanka (Pvt) Ltd — Site loaded successfully ✓',
         'color:#0077B6; font-size:13px; font-weight:600;');
 });

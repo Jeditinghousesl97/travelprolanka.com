@@ -43,15 +43,15 @@ $reviews = $pdo->query("SELECT * FROM reviews WHERE is_approved = 1 ORDER BY id 
 $badgeClass = ['popular'=>'badge-popular','bestseller'=>'badge-bestseller','new'=>'badge-new','limited'=>'badge-limited','hotdeal'=>'badge-hot'];
 $badgeLabel = ['popular'=>'Popular','bestseller'=>'Best Seller','new'=>'New','limited'=>'Limited','hotdeal'=>'Hot Deal'];
 
-$seoTitle = $cfg('seo_meta_title', 'ASB Tours | Explore the Beauty of Sri Lanka');
-$seoDesc  = $cfg('seo_meta_desc',  'ASB Tours, Discover the Pearl of the Indian Ocean. Expertly crafted Sri Lanka tour packages.');
+$seoTitle = $cfg('seo_meta_title', 'Travel Pro Lanka (Pvt) Ltd | Explore the Beauty of Sri Lanka');
+$seoDesc  = $cfg('seo_meta_desc',  'Travel Pro Lanka (Pvt) Ltd, Discover Sri Lanka in Confort & Style with expertly crafted tour packages.');
 $seoCanonical = absolute_site_url('/');
 $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/logo.png');
 $seoSchemas = [
     [
         '@context' => 'https://schema.org',
         '@type' => 'TravelAgency',
-        'name' => $cfg('site_name', 'ASB Tours'),
+        'name' => $cfg('site_name', 'Travel Pro Lanka (Pvt) Ltd'),
         'url' => $seoCanonical,
         'logo' => absolute_site_url(public_asset_url($seoImage)),
         'image' => absolute_site_url(public_asset_url($seoImage)),
@@ -62,7 +62,7 @@ $seoSchemas = [
     [
         '@context' => 'https://schema.org',
         '@type' => 'WebSite',
-        'name' => $cfg('site_name', 'ASB Tours'),
+        'name' => $cfg('site_name', 'Travel Pro Lanka (Pvt) Ltd'),
         'url' => $seoCanonical,
         'description' => $seoDesc,
     ],
@@ -81,7 +81,7 @@ $seoSchemas = [
         'canonical' => $seoCanonical,
         'image' => public_asset_url($seoImage),
         'type' => 'website',
-        'site_name' => $cfg('site_name', 'ASB Tours'),
+        'site_name' => $cfg('site_name', 'Travel Pro Lanka (Pvt) Ltd'),
         'structured_data' => $seoSchemas,
     ]); ?>
     <title><?= htmlspecialchars($seoTitle) ?></title>
@@ -141,7 +141,7 @@ $seoSchemas = [
                      style="background-image: url('<?= htmlspecialchars($b['image_path'] ? site_url($b['image_path']) : 'assets/images/hero/slide-1.jpg') ?>')">
                     <div class="hero-overlay"></div>
                     <div class="container hero-content">
-                        <span class="hero-badge"><?= htmlspecialchars($b['badge_text'] ?: $cfg('site_name', 'ASB Tours')) ?></span>
+                        <span class="hero-badge"><?= htmlspecialchars($b['badge_text'] ?: $cfg('site_name', 'Travel Pro Lanka (Pvt) Ltd')) ?></span>
                         <<?= $heroTag ?>><?= renderHeroHeading($b['heading']) ?></<?= $heroTag ?>>
                         <?php if ($b['subheading']): ?>
                         <p><?= htmlspecialchars($b['subheading']) ?></p>
@@ -163,7 +163,7 @@ $seoSchemas = [
                 <div class="swiper-slide hero-slide" style="background-image: url('assets/images/hero/slide-1.jpg')">
                     <div class="hero-overlay"></div>
                     <div class="container hero-content">
-                        <span class="hero-badge">Welcome to ASB Tours</span>
+                        <span class="hero-badge">Welcome to Travel Pro Lanka (Pvt) Ltd</span>
                         <h1>Discover the Pearl of <span>the Indian Ocean</span></h1>
                         <p>Explore Sri Lanka's ancient wonders, golden beaches, lush tea hills, and incredible wildlife with our expertly crafted tour packages.</p>
                         <div class="hero-btns">
@@ -212,7 +212,7 @@ $seoSchemas = [
             <div class="about-grid">
                 <div class="about-image" data-aos="fade-right">
                     <img src="<?= htmlspecialchars($cfg('about_image') ? public_asset_url($cfg('about_image')) : 'assets/images/destinations/sigiriya.jpg') ?>"
-                         alt="<?= htmlspecialchars($cfg('site_name','ASB Tours')) ?>, Sri Lanka Travel Specialists">
+                         alt="<?= htmlspecialchars($cfg('site_name','Travel Pro Lanka (Pvt) Ltd')) ?>, Sri Lanka Travel Specialists">
                     <div class="about-badge">
                         <span class="badge-number"><?= htmlspecialchars($cfg('about_years','10+')) ?></span>
                         <span class="badge-text">Years of Experience</span>
@@ -226,7 +226,7 @@ $seoSchemas = [
                         <span><?= htmlspecialchars($cfg('about_heading_accent', 'Travel Specialists')) ?></span>
                         <?php endif; ?>
                     </h2>
-                    <p><?= nl2br(htmlspecialchars($cfg('about_description', "At ASB Tours, we are passionate local travel experts dedicated to showcasing the very best of Sri Lanka, the Pearl of the Indian Ocean."))) ?></p>
+                    <p><?= nl2br(htmlspecialchars($cfg('about_description', "At Travel Pro Lanka (Pvt) Ltd, we are passionate local travel experts dedicated to showcasing the very best of Sri Lanka in confort and style."))) ?></p>
                     <?php if ($cfg('about_mission')): ?>
                     <p><?= nl2br(htmlspecialchars($cfg('about_mission'))) ?></p>
                     <?php endif; ?>
@@ -538,7 +538,7 @@ $seoSchemas = [
             <div class="section-header" data-aos="fade-up">
                 <span class="section-label">HAPPY TRAVELERS</span>
                 <h2 class="section-title">What Our <span>Travelers Say</span></h2>
-                <p>Real experiences from real adventurers who explored Sri Lanka with ASB Tours.</p>
+                <p>Real experiences from real adventurers who explored Sri Lanka with Travel Pro Lanka (Pvt) Ltd.</p>
             </div>
 
             <div class="reviews-layout" data-aos="fade-up">
@@ -550,7 +550,7 @@ $seoSchemas = [
                         <div class="rv-scroll-track" id="rvTrack">
                             <?php
                             $staticRevs = [
-                                ['stars'=>5,'text'=>'Absolutely breathtaking! Our guide took us through Sigiriya at sunrise and the views were unlike anything I\'ve ever seen. Every detail was perfectly arranged. ASB Tours exceeded every expectation.','tour'=>'Cultural Triangle Explorer','name'=>'Sarah Mitchell','loc'=>'London, United Kingdom','av'=>1,'init'=>'SM'],
+                                ['stars'=>5,'text'=>'Absolutely breathtaking! Our guide took us through Sigiriya at sunrise and the views were unlike anything I\'ve ever seen. Every detail was perfectly arranged. Travel Pro Lanka (Pvt) Ltd exceeded every expectation.','tour'=>'Cultural Triangle Explorer','name'=>'Sarah Mitchell','loc'=>'London, United Kingdom','av'=>1,'init'=>'SM'],
                                 ['stars'=>5,'text'=>'The beach package was pure paradise. Mirissa, Unawatuna, Galle, all stunning. The team handled everything flawlessly from airport pickup to hotel check-ins. I\'ll be booking again for sure!','tour'=>'South Coast Beach Escape','name'=>'David Chen','loc'=>'Singapore','av'=>2,'init'=>'DC'],
                                 ['stars'=>5,'text'=>'The Ella train ride was magical, misty mountains, endless tea estates, and the Nine Arches Bridge. Our guide knew every hidden viewpoint. A truly immersive Sri Lankan experience.','tour'=>'Hill Country & Tea Trails','name'=>'Emma van den Berg','loc'=>'Amsterdam, Netherlands','av'=>3,'init'=>'EB'],
                                 ['stars'=>5,'text'=>'Yala National Park was incredible, we spotted leopards, elephants, and crocodiles all in one morning! The jeep safari was well organised and our naturalist guide was exceptionally knowledgeable.','tour'=>'Yala Safari Adventure','name'=>'James O\'Brien','loc'=>'Sydney, Australia','av'=>4,'init'=>'JO'],
@@ -651,7 +651,7 @@ $seoSchemas = [
                                 </div>
                                 <div class="rv-field">
                                     <label>Your Review <span>*</span></label>
-                                    <textarea name="review_text" rows="4" placeholder="Tell us about your experience traveling with ASB Tours..." required></textarea>
+                                    <textarea name="review_text" rows="4" placeholder="Tell us about your experience traveling with Travel Pro Lanka (Pvt) Ltd..." required></textarea>
                                 </div>
                                 <?php if ($turnstileEnabled): ?>
                                 <div class="rv-field">
@@ -1107,7 +1107,6 @@ $seoSchemas = [
 
 </body>
 </html>
-
 
 
 

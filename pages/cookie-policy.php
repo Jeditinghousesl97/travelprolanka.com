@@ -6,8 +6,8 @@ if (file_exists(__DIR__ . '/../maintenance.flag')) { include __DIR__ . '/../main
 
 $s   = $pdo->query("SELECT `key`, `value` FROM settings")->fetchAll(PDO::FETCH_KEY_PAIR);
 $cfg = fn(string $key, string $default = '') => (isset($s[$key]) && $s[$key] !== '') ? $s[$key] : $default;
-$seoTitle = 'Cookie Policy | ASB Tours Sri Lanka';
-$seoDesc = 'Cookie Policy for ASB Tours Sri Lanka. Learn about the cookies we use and how to manage your preferences.';
+$seoTitle = 'Cookie Policy | Travel Pro Lanka (Pvt) Ltd';
+$seoDesc = 'Cookie Policy for Travel Pro Lanka (Pvt) Ltd. Learn about the cookies we use and how to manage your preferences.';
 $seoCanonical = absolute_site_url('pages/cookie-policy.php');
 $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/logo.png');
 ?>
@@ -24,7 +24,7 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
         'canonical' => $seoCanonical,
         'image' => $seoImage,
         'type' => 'website',
-        'site_name' => $cfg('site_name', 'ASB Tours'),
+        'site_name' => $cfg('site_name', 'Travel Pro Lanka (Pvt) Ltd'),
     ]); ?>
     <title><?= htmlspecialchars($seoTitle) ?></title>    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,7 +99,7 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
 
     <div class="policy-body">
 
-        <p>This Cookie Policy explains what cookies are, how ASB Tours uses them on our website, and what choices you have regarding their use. By continuing to use our website, you consent to our use of cookies as described in this policy.</p>
+        <p>This Cookie Policy explains what cookies are, how Travel Pro Lanka (Pvt) Ltd uses them on our website, and what choices you have regarding their use. By continuing to use our website, you consent to our use of cookies as described in this policy.</p>
 
         <h2>1. What Are Cookies?</h2>
         <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They help the website remember your actions and preferences over time, so you don't have to re-enter them each time you visit.</p>
@@ -169,8 +169,8 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
         <h2>7. Contact Us</h2>
         <p>If you have any questions about our use of cookies, please contact us:</p>
         <ul>
-            <li><strong>Email:</strong> <a href="mailto:<?= htmlspecialchars($cfg('contact_email', 'info@asbtours.com')) ?>"><?= htmlspecialchars($cfg('contact_email', 'info@asbtours.com')) ?></a></li>
-            <li><strong>Phone:</strong> <?= htmlspecialchars($cfg('contact_phone', '+94 11 234 5678')) ?></li>
+            <li><strong>Email:</strong> <a href="mailto:<?= htmlspecialchars($cfg('contact_email', 'info@travelprolanka.com')) ?>"><?= htmlspecialchars($cfg('contact_email', 'info@travelprolanka.com')) ?></a></li>
+            <li><strong>Phone:</strong> <?= htmlspecialchars($cfg('contact_phone', '+94 77 440 7565')) ?></li>
         </ul>
 
     </div>
@@ -182,7 +182,6 @@ $seoImage = $cfg('seo_image', '') ?: ($cfg('site_logo', '') ?: 'assets/images/lo
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
-
 
 
 
