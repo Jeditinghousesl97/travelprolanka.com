@@ -110,6 +110,34 @@ if (!function_exists('theme_setting_definitions')) {
     }
 }
 
+if (!function_exists('theme_opacity_setting_definitions')) {
+    function theme_opacity_setting_definitions(): array
+    {
+        return [
+            'theme_hero_overlay_top_opacity' => [
+                'label' => 'Hero Overlay Top Opacity',
+                'default' => '0.70',
+                'description' => 'Opacity for the top fade layer (0 = transparent, 1 = solid).',
+            ],
+            'theme_hero_overlay_start_opacity' => [
+                'label' => 'Hero Overlay Start Opacity',
+                'default' => '0.65',
+                'description' => 'Opacity for the main gradient start color.',
+            ],
+            'theme_hero_overlay_mid_opacity' => [
+                'label' => 'Hero Overlay Middle Opacity',
+                'default' => '0.40',
+                'description' => 'Opacity for the main gradient middle color.',
+            ],
+            'theme_hero_overlay_end_opacity' => [
+                'label' => 'Hero Overlay End Opacity',
+                'default' => '0.25',
+                'description' => 'Opacity for the main gradient end color.',
+            ],
+        ];
+    }
+}
+
 if (!function_exists('theme_normalize_hex_color')) {
     function theme_normalize_hex_color(?string $value, string $fallback): string
     {
@@ -130,6 +158,25 @@ if (!function_exists('theme_normalize_hex_color')) {
         }
 
         return $fallback;
+    }
+}
+
+if (!function_exists('theme_normalize_opacity')) {
+    function theme_normalize_opacity($value, string $fallback): string
+    {
+        $value = trim((string) $value);
+        if ($value === '' || !is_numeric($value)) {
+            return $fallback;
+        }
+
+        $float = (float) $value;
+        if ($float < 0) {
+            $float = 0;
+        } elseif ($float > 1) {
+            $float = 1;
+        }
+
+        return number_format($float, 2, '.', '');
     }
 }
 

@@ -9,6 +9,7 @@ $pdo     = getPDO();
 $success = '';
 $errors  = [];
 $themeSettings = theme_setting_definitions();
+$themeOpacitySettings = theme_opacity_setting_definitions();
 
 // Load all settings
 $rows = $pdo->query('SELECT `key`, `value` FROM settings')->fetchAll();
@@ -203,6 +204,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         foreach ($themeSettings as $key => $meta) {
             $color = theme_normalize_hex_color($_POST[$key] ?? '', $meta['default']);
             saveSetting($pdo, $key, $color);
+        }
+        foreach ($themeOpacitySettings as $key => $meta) {
+            $opacity = theme_normalize_opacity($_POST[$key] ?? '', $meta['default']);
+            saveSetting($pdo, $key, $opacity);
         }
         saveSetting($pdo, 'cache_busted_at', date('Y-m-d H:i:s'));
         $s = array_column($pdo->query('SELECT `key`,`value` FROM settings')->fetchAll(), 'value', 'key');
@@ -651,6 +656,26 @@ include __DIR__ . '/../includes/header.php';
                   <input type="color" name="<?= htmlspecialchars($key) ?>" value="<?= htmlspecialchars($value) ?>" class="form-control form-control-color">
                   <input type="text" value="<?= htmlspecialchars($value) ?>" class="form-control theme-hex-input" data-sync-color="<?= htmlspecialchars($key) ?>">
                 </div>
+                <div class="form-text"><?= htmlspecialchars($meta['description']) ?></div>
+              </div>
+            <?php endforeach; ?>
+          </div>
+          <hr class="my-4">
+          <h6 class="fw-semibold mb-3">Hero Overlay Opacity</h6>
+          <div class="row g-3">
+            <?php foreach ($themeOpacitySettings as $key => $meta): ?>
+              <?php $opacityValue = theme_normalize_opacity($s[$key] ?? $meta['default'], $meta['default']); ?>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold"><?= htmlspecialchars($meta['label']) ?></label>
+                <input
+                  type="number"
+                  name="<?= htmlspecialchars($key) ?>"
+                  class="form-control"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="<?= htmlspecialchars($opacityValue) ?>"
+                >
                 <div class="form-text"><?= htmlspecialchars($meta['description']) ?></div>
               </div>
             <?php endforeach; ?>
